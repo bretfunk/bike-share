@@ -1,0 +1,32 @@
+## Setting Group Expectations
+Group Member Names:
+Sam
+Bret
+Marc
+Matt
+1. When are group members available to work together?
+Sam can't do early.  Matt is flexible.  Bret is flexible.  Marc is flexible.
+What hours can each group member work individually?
+Group says whenever.
+Are there any personal time commitments that need to be discussed?
+Marc's dog.  Bret's basement.  Sam's nine hours.
+1. How will group members communicate? How often will communication happen, and how will open lines of communication be maintained?
+Slack.
+1. Which feature(s) does each group member *want* to work on? Which feature(s) does each group member *not want* to work on?
+Group is flexible.
+1. What does each group member hope to get out of the project?
+Group wants styling, ActiveRecord, SQL.
+1. What is the agreed upon Git workflow? What project management tool will be used? What is the agreed upon procedure for conducting code reviews before merging into master: who will review pull requests, and when?
+branches - I1 <branch feature>, we will do branches for each iteration, lots of communication.  Anyone can review.
+1. What is expected of group members when they run into problems implementing a feature?
+Ask someone is after 30 min.
+1. How does each group member want feedback (both positive and constructive) to be delivered?
+Marc likes face to face for big things.
+Sam thinks 1-on-1 is better for sensative issues.
+Matt open and honest.
+Bret agrees with all comments.
+1. Is there anything else the group should know about personal work/communication styles?
+Matt prefers face to face.
+Sam likes feedback in person but likes asks and requests to be written.
+Marc likes specific directions.
+Bret likes work work work.

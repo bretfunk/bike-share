@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>Station Dashboard</h1>
+</div>
+<h3>Total Count of Stations:</h3>
+  <p><%= @count %></p>
+<h3>Average Bikes Available:</h3>
+  <p><%= @average %></p>
+<h3>Most bikes available at a station:</h3>
+  <p><%= @most_bikes %></p>
+<h3>Station(s) where the most bikes are available: </h3>
+  <% @stations_with_most_bikes.each do |station| %>
+  <p><%= station.station_name.name %></p>
+  <% end %>
+<h3>Fewest bikes available at a station:</h3>
+  <p><%= @fewest_bikes_avaiable %></p>
+<h3>Station(s) where the fewest bikes are available:</h3>
+  <% @stations_with_fewest_bikes.each do |station| %>
+  <p><%= station.station_name.name %></p>
+  <% end %>
+<h3>Most recently installed station:</h3>
+  <p><%= @most_recent_station %></p>
+<h3>Oldest station:</h3>
+  <p><%= @oldest_station %></p>

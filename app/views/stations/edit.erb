@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <h1>Edit Station</h1>
+</div>
+<form action="/stations/<%= @station.id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT"/>
+  <label for="name">Update Station Name</br>
+  <input type="text" name="station[name]" value="<%= @station.name %>" id="name"></br>
+  <label for="dock_count">Update Dock Count<br/>
+  <input type="text" name="station[dock_count]" value="<%= @station.dock_count %>" id="dock_count"><br/>
+  <label for="city">Update City<br/>
+  <input type="text" name="station[city]" value= "<%= @station.city %>" id="city"><br/>
+  <label for="installation_date">Update Installation Date<br/>
+  <input type="text" name="station[installation_date]" value="<%= @station.installation_date %>" id="station.installation_date"><br/>
+  <button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true">Submit</a>
+</form>

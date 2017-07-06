@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h1>Add A New Station</h1>
+</div>
+<form action="/stations/new" method="post">
+  <label for="name">Name</br>
+  <input type="text" name="station[name]" id="name"></br>
+  <label for="dock_count">Dock Count<br/>
+  <input type="text" name="station[dock_count]" id="dock_count"><br/>
+  <label for="city">City<br/>
+  <input type="text" name="station[city]" id="city"><br/>
+  <label for="installation_date">Installation Date<br/>
+  <input type="text" name="station[installation_date]" id="installation_date"><br/>
+  <button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true">Create Station</a>

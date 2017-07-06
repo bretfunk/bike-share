@@ -1,0 +1,41 @@
+<div class="jumbotron">
+  <h1>Conditions for <%= @condition.date %></h1>
+</div>
+<div class="table-responsive">
+  <table class="table text-left">
+    <tr>
+      <th>Date</th>
+      <th>Max Temperature</th>
+      <th>Mean Temperature</th>
+      <th>Min Temperature</th>
+      <th>Mean Humidity</th>
+      <th>Mean Visibility (miles)</th>
+      <th>Mean Wind Speed (mph)</th>
+      <th>Precipitation (inches)</th>
+      <th>Edit</th>
+      <th>Delete</th>
+        </tr>
+        <tr>
+          <td><a href='/conditions/<%= @condition.id %>'><%= @condition.date %></a></td>
+          <td><%= @condition.max_temperature_f.round %> F</td>
+          <td><%= @condition.mean_temperature_f.round %> F</td>
+          <td><%= @condition.min_temperature_f.round %> F</td>
+          <td><%= @condition.mean_humidity.round %></td>
+          <td><%= @condition.mean_visibility_miles.round %></td>
+          <td><%= @condition.mean_wind_speed_mph.round %></td>
+          <td><%= @condition.precipitation_inches.round %></td>
+          <td>
+            <form action="/conditions/<%= @condition.id %>/edit" method="get">
+              <button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true" value="edit">Edit</a>
+            </form>
+          </td>
+
+          <td>
+            <form action="/conditions/<%= @condition.id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true" value="delete">Delete</a>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>

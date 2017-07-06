@@ -1,0 +1,37 @@
+<div class="jumbotron">
+  <h1>Edit Trip <%= @trip.id %></h1>
+</div>
+<form action="/trips/<%= @trip.id %>" method="post">
+  <input type="hidden" name="_method" value="PUT"/>
+  <label for="duration">Duration<br/></br>
+<input type="text" name="trip[duration]" value="<%= @trip.duration %>" id="duration"></br>
+<label for="start_date">Start Date<br/></br>
+<input type="text" name="trip[start_date]" value="<%= @trip.start_date %>" id="start_date"></br>
+<label for="start_station">Start Station<br/></br>
+  <div class="dropdown">
+    <select name="trip[start_station_name]">
+      <% @station_names.each do |station| %>
+      <option id="start_station"><%= station.name %></option>
+      <% end %>
+    </select>
+  </div>
+<!-- <input type="text" name="trip[start_station_name]" value="<%= @trip.start_station_name %>" id="start_station"></br> -->
+<label for="end_date">End Date<br/></br>
+<input type="text" name="trip[end_date]" value="<%= @trip.end_date %>" id="end_date"></br>
+<label for="end_station">End Station<br/></br>
+  <div class="dropdown ">
+    <select name="trip[end_station_name]">
+      <% @station_names.each do |station| %>
+      <option id="end_station"><%= station.name %></option>
+      <% end %>
+    </select>
+  </div>
+<!-- <input type="text" name="trip[end_station_name]" value="<%= @trip.end_station_name %>" id="end_station"></br> -->
+<label for="bike_id">Bike ID<br/></br>
+<input type="text" name="trip[bike_id]" value="<%= @trip.bike_id %>" id="bike_id"></br>
+<label for="subscription_type">Subscription Type<br/></br>
+<input type="text" name="trip[subscription_type]" value="<%= @trip.subscription_type %>" id="subscription_type"></br>
+<label for="zip_code">Zip Code<br/></br>
+<input type="text" name="trip[zip_code]" value="<%= @trip.zip_code %>" id="zip_code"></br>
+<button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true">Submit</a>
+</form>

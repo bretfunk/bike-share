@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>Edit Condition</h1>
+</div>
+<form action="/conditions/<%= @condition.id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT"/>
+    <label for="date">Update Date<br>
+      <input type="text" name="weather[date]" value="<%= @condition.date %>" id="date"></br>
+    <label for="max_temperature_f">Update Max Temperature<br>
+      <input type="text" name="weather[max_temperature_f]" value="<%= @condition.max_temperature_f %>" id="max_temperature_f"></br>
+    <label for="mean_temperature_f">Update Mean Temperature<br/>
+      <input type="text" name="weather[mean_temperature_f]" value="<%= @condition.mean_temperature_f %>" id="mean_temperature_f"></br>
+    <label for="mean_temperature_f">Update Mean Temperature<br>
+      <input type="text" name="weather[min_temperature_f]" value="<%= @condition.min_temperature_f %>" id="mean_temperature_f"></br>
+    <label for="mean_humidity">Update Mean Humidity<br/>
+      <input type="text" name="weather[mean_humidity]" value="<%= @condition.mean_humidity %>" id="mean_humidity"></br>
+    <label for="mean_visibility_miles">Update Mean Visibility<br>
+      <input type="text" name="weather[mean_visibility_miles]" value="<%= @condition.mean_visibility_miles %>" id="mean_visibility_miles"></br>
+    <label for="mean_wind_speed_mph">Update Mean Wind Speed<br>
+      <input type="text" name="weather[mean_wind_speed_mph]" value="<%= @condition.mean_wind_speed_mph %>" id="mean_wind_speed_mph"></br>
+    <label for="precipitation">Update Precipitation<br>
+      <input type="text" name="weather[precipitation_inches]" value="<%= @condition.precipitation_inches %>" id="precipitation_inches"></br>
+  <button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true">Update Condition</a>
+</form>

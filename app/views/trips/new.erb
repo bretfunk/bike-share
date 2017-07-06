@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  <h1>Add A New Trip</h1>
+</div>
+<form action="/trips/new" method="post">
+  <label for="duration">Duration<br>
+      <input type="text" name="trip[duration]" id="duration"></br>
+    <label for="start_date">Start Date<br>
+        <input type="text" name="trip[start_date]" id="start_date"></br>
+      <label for="start_station">Start Station<br/>
+        <div class="dropdown">
+          <select name="trip[start_station_name]">
+            <% @station_names.each do |station| %>
+            <option id="start_station"><%= station.name %></option>
+            <% end %>
+          </select>
+        </div>
+        <label for="end_date">End Date<br>
+            <input type="text" name="trip[end_date]" id="end_date"></br>
+          <label for="end_station">End Station<br/>
+            <div class="dropdown ">
+              <select name="trip[end_station_name]">
+                <% @station_names.each do |station| %>
+                <option id="end_station"><%= station.name %></option>
+                <% end %>
+              </select>
+            </div>
+            <!-- <input type="text" name="trip[end_station_name]" id="end_station"></br> -->
+            <label for="bike_id">Bike ID<br>
+                <input type="text" name="trip[bike_id]" id="bike_id"></br>
+              <label for="subscription_type">Subscription Type<br>
+                  <input type="text" name="trip[subscription_type]" id="subscription_type"></br>
+                <label for="zip_code">Zip Code<br>
+                    <input type="text" name="trip[zip_code]" id="zip_code"></br>
+                  <button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true">Submit</a>
+                </form>

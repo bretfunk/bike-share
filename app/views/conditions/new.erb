@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h1>Add A New Condition</h1>
+</div>
+<form action="/conditions/new" method="post">
+  <label for="date">Date<br>
+    <input type="text" name="weather[date]" id="date"></br>
+  <label for="max_temperature_f">Max Temperature<br>
+    <input type="text" name="weather[max_temperature_f]" id="max_temperature_f"></br>
+  <label for="mean_temperature_f">Mean Temperature<br/>
+    <input type="text" name="weather[mean_temperature_f]" id="mean_temperature_f"></br>
+  <label for="mean_temperature_f">Mean Temperature<br>
+    <input type="text" name="weather[min_temperature_f]" id="mean_temperature_f"></br>
+  <label for="mean_humidity">Mean Humidity<br/>
+    <input type="text" name="weather[mean_humidity]" id="mean_humidity"></br>
+  <label for="mean_visibility_miles">Mean Visibility<br>
+    <input type="text" name="weather[mean_visibility_miles]" id="mean_visibility_miles"></br>
+  <label for="mean_wind_speed_mph">Mean Wind Speed<br>
+    <input type="text" name="weather[mean_wind_speed_mph]" id="mean_wind_speed_mph"></br>
+  <label for="precipitation">Precipitation<br>
+    <input type="text" name="weather[precipitation_inches]" id="precipitation_inches"></br>
+  <button type="submit" class="btn btn-primary btn active" role="button" aria-pressed="true">Create Condition</a>
+</form>

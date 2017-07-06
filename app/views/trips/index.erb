@@ -1,0 +1,46 @@
+<div class="jumbotron">
+  <h1>Trips</h1>
+</div>
+<div class="table-responsive">
+  <table class="table text-left table-hover">
+    <tr>
+      <th>Trip ID</th>
+      <th>Duration</th>
+      <th>Start Date</th>
+      <th>Start Station</th>
+      <th>End Date</th>
+      <th>End Station</th>
+      <th>Bike ID</th>
+      <th>Subscription Type</th>
+      <th>Zip Code<th>
+      <th>Edit</th>
+      <th>Delete</th>
+        </tr>
+        <% @trips.each do |trip| %>
+        <tr onclick="window.location.href = '/trips/<%= trip.id %>';">
+          <td><%= trip.id %></td>
+          <td><%= trip.duration %></td>
+          <td><%= trip.start_date %></td>
+          <td><%= trip.start_station_name %></td>
+          <td><%= trip.end_date %></td>
+          <td><%= trip.end_station_name %></td>
+          <td><%= trip.bike_id %></td>
+          <td><%= trip.subscription_type %></td>
+          <td><%= trip.zip_code %></td>
+          <td>
+            <form action="/trips/<%= trip.id %>/edit" method="get">
+              <button type="submit" class="btn btn-primary btn active btn-sm" role="button" aria-pressed="true" value="edit">Edit</a>
+            </form>
+          </td>
+
+          <td>
+            <form action="/trips/<%= trip.id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-primary btn active btn-sm" role="button" aria-pressed="true" value="delete">Delete</a>
+            </form>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+      <%= will_paginate @trips %>
+    </div>

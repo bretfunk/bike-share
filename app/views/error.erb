@@ -1,0 +1,10 @@
+
+<h1>YOU FUCKED UP</h1>
+
+<form action='<%= @params[:page] %>' method="get">
+  <% location = @params[:page].to_s %>
+  <% words = location.split('/') %>
+  <% first = words[1] %>
+  <% second = words[2] %>
+  <input type="submit" value="Go Back to <%= second.capitalize %> <%= first.capitalize %>"/>
+</form>
